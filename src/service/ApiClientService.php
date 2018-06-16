@@ -16,7 +16,7 @@ class ApiClientService
 
         $stack = new OauthService;
 
-		//try{
+		try{
 	    	$client = new Client([
 	    		'base_url' => Config::get('laravelFluig::FLUIG_URL'),
                 'defaults' => ['auth' => 'oauth']
@@ -27,9 +27,9 @@ class ApiClientService
 	    	$res = $client->get($endpoint);
             return $response->parseResponse($res);
 
-//        }catch(Exception $e){
-//            return $e->getMessage();
-//        }
+        }catch(Exception $e){
+            return $e->getMessage();
+        }
 
 	}
 		
@@ -41,7 +41,7 @@ class ApiClientService
 
             $stack = new OauthService;
 	    	$client = new Client([
-	    		'base_url' => Config::get('LaravelFluig::FLUIG_URL'),
+	    		'base_url' => Config::get('laravelFluig::FLUIG_URL'),
                 'defaults' => ['auth' => 'oauth']
 			]);
 
