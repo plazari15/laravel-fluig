@@ -1,0 +1,25 @@
+{
+    "name": "plazari15/laravel-fluig",
+    "description": "Biblioteca PHP responsável pelo consumo da API Rest do Fluig",
+    "authors": [
+        {
+            "name": "Pedro Lazari",
+            "email": "plazari96@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0",
+        "illuminate/support": "4.2.*",
+        "guzzlehttp/guzzle": "^5.3",
+        "guzzlehttp/oauth-subscriber": "^0.2.0"
+    },
+    "autoload": {
+        "classmap": [
+            "src/migrations"
+        ],
+        "psr-0": {
+            "Plazari15\\LaravelFluig\\": "src/"
+        }
+    },
+    "minimum-stability": "stable"
+}
