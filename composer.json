@@ -1,6 +1,7 @@
 {
     "name": "plazari15/laravel-fluig",
     "description": "Laravel Package for TOTVS Fluig REST Api. Compatible with Fluig >= 1.5. ",
+    "license": "MIT",
     "authors": [
         {
             "name": "Pedro Lazari",
