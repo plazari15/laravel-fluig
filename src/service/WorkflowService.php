@@ -10,8 +10,8 @@ class WorkflowService
 {
     private $apiClient;
 
-    CONST findObservationURL = '/api/public/2.0/workflows/findActiveTasks/';
-    CONST createProcessObservation = '/api/public/2.0/workflows/createProcessObservation';
+    CONST findObservationEndpoint = '/api/public/2.0/workflows/findActiveTasks/';
+    CONST createProcessObservationEndpoint = '/api/public/2.0/workflows/createProcessObservation';
 
 
     public function __construct()
@@ -20,7 +20,7 @@ class WorkflowService
     }
 
     public function findObservations($process){
-        $jsonResponse = $this->apiClient->get(self::findObservationURL.$process);
+        $jsonResponse = $this->apiClient->get(self::findObservationEndpoint.$process);
         return $jsonResponse;
     }
 
@@ -32,7 +32,7 @@ class WorkflowService
             "observation" => $workflow->observation
         ];
 
-        $response = $this->apiClient->post(self::createProcessObservation, $data);
+        $response = $this->apiClient->post(self::createProcessObservationEndpoint, $data);
 
         return $response;
     }
