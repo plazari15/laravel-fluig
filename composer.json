@@ -1,10 +1,14 @@
 {
     "name": "plazari15/laravel-fluig",
-    "description": "Biblioteca PHP responsável pelo consumo da API Rest do Fluig",
+    "description": "Laravel Package for TOTVS Fluig REST Api. Compatible with Fluig >= 1.5. ",
     "authors": [
         {
             "name": "Pedro Lazari",
             "email": "plazari96@gmail.com"
+        },
+        {
+            "name": "Pedro Lazari",
+            "email": "pedro.lazari@gmail.com"
         }
     ],
     "require": {
