@@ -9,7 +9,7 @@ This is a package developed to Work with Laravel  \>= 4.2.
 **To make a new installation **
 1. just run this composer command 
 ```bash
-dsdsd
+composer require plazari15/laravel-fluig
 ```
 
 2. Insert the provider at `app\config.php`
@@ -39,4 +39,10 @@ php artisan config:publish plazari15/laravel-fluig
 			'FLUIG_URL'=>''
 		)
 	```
+	
+	*TODO*
+	
+	- Make Tests
+	- Make an new api to get and send attachments
+	- improve docs
 
