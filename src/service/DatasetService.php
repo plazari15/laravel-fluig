@@ -7,6 +7,8 @@ use Plazari15\LaravelFluig\Model\Dataset;
 
 class DatasetService
 {
+    CONST getDatasetEndpoint = 'api/public/ecm/dataset/datasets';
+
     public function getDataset(Dataset $dataset){
 
         $apiClient = new ApiClientService;
@@ -18,7 +20,7 @@ class DatasetService
             'order' => $dataset->order
         ];
 
-        $jsonResponse = $apiClient->post('api/public/ecm/dataset/datasets', $data);
+        $jsonResponse = $apiClient->post(self::getDatasetEndpoint, $data);
         return $jsonResponse;
     }
     
