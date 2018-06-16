@@ -13,11 +13,12 @@ class OauthService
 
         //try{
 	   		$middleware = new Oauth1([
-                'consumer_key'    => Config::get('LaravelFluig::FLUIG_CONSUMER_KEY'),
-                'consumer_secret' => Config::get('LaravelFluig::FLUIG_CONSUMER_SECRET'),
-                'token'           => Config::get('LaravelFluig::FLUIG_ACCESS_TOKEN'),
-                'token_secret'    => Config::get('LaravelFluig::FLUIG_TOKEN_SECRET')
+                'consumer_key'    => Config::get('laravelFluig::FLUIG_CONSUMER_KEY'),
+                'consumer_secret' => Config::get('laravelFluig::FLUIG_CONSUMER_SECRET'),
+                'token'           => Config::get('laravelFluig::FLUIG_ACCESS_TOKEN'),
+                'token_secret'    => Config::get('laravelFluig::FLUIG_TOKEN_SECRET')
 	    	]);
+
 
 //	    	return $middleware;
 //
@@ -32,10 +33,10 @@ class OauthService
 
         //try{
         $middleware = new Oauth1([
-            'consumer_key'    => Config::get('LaravelFluig::FLUIG_CONSUMER_KEY_POST'),
-            'consumer_secret' => Config::get('LaravelFluig::FLUIG_CONSUMER_SECRET_POST'),
-            'token'           => Config::get('LaravelFluig::FLUIG_ACCESS_TOKEN_POST'),
-            'token_secret'    => Config::get('LaravelFluig::FLUIG_TOKEN_SECRET_POST')
+            'consumer_key'    => Config::get('laravelFluig::FLUIG_CONSUMER_KEY_POST'),
+            'consumer_secret' => Config::get('laravelFluig::FLUIG_CONSUMER_SECRET_POST'),
+            'token'           => Config::get('laravelFluig::FLUIG_ACCESS_TOKEN_POST'),
+            'token_secret'    => Config::get('laravelFluig::FLUIG_TOKEN_SECRET_POST')
         ]);
 
 //	    	return $middleware;
