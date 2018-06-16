@@ -1,5 +1,7 @@
 # Laravel TOTVS Fluig Package
 
+[![stable](http://badges.github.io/stability-badges/dist/stable.svg)](http://github.com/badges/stability-badges)
+
 This is a package that turns easy the Communication between Laravel and TOTVS Fluig by REST API.
 
 This is a package developed to Work with Laravel  \>= 4.2.
