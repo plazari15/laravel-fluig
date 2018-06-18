@@ -3,6 +3,8 @@
 namespace Plazari15\LaravelFluig\Service;
 
 use GuzzleHttp\Client;
+use GuzzleHttp\Exception\BadResponseException;
+use GuzzleHttp\Exception\ServerException;
 use Illuminate\Support\Facades\Config;
 use Plazari15\LaravelFluig\Service\OauthService;
 use Plazari15\LaravelFluig\Service\HandlerFluigResponse;
@@ -27,8 +29,8 @@ class ApiClientService
 	    	$res = $client->get($endpoint);
             return $response->parseResponse($res);
 
-        }catch(Exception $e){
-            return $e->getMessage();
+        }catch(BadResponseException $e){
+            return $response->parseResponseError($e);
         }
 
 	}
@@ -51,8 +53,8 @@ class ApiClientService
 
 			return $response->parseResponse($res);
 
-		}catch(\Exception $e){
-			return  $e->getMessage();
+		}catch(BadResponseException $e) {
+            return $response->parseResponseError($e);
         }
     }
 }
