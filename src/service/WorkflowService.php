@@ -12,6 +12,7 @@ class WorkflowService
 
     CONST findObservationEndpoint = '/api/public/2.0/workflows/findActiveTasks/';
     CONST createProcessObservationEndpoint = '/api/public/2.0/workflows/createProcessObservation';
+    CONST StreamEcmFileEndpoint = '/api/public/ecm/document/activedocument/';
 
 
     public function __construct()
@@ -21,6 +22,12 @@ class WorkflowService
 
     public function findObservations($process){
         $jsonResponse = $this->apiClient->get(self::findObservationEndpoint.$process);
+        return $jsonResponse;
+    }
+
+    public function getFileEcmDownload($attachmentId){
+        $jsonResponse = $this->apiClient->get(self::DownloadFileEndpoint.$attachmentId);
+
         return $jsonResponse;
     }
 
