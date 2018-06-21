@@ -12,7 +12,7 @@ class WorkflowService
 
     CONST findObservationEndpoint = '/api/public/2.0/workflows/findActiveTasks/';
     CONST createProcessObservationEndpoint = '/api/public/2.0/workflows/createProcessObservation';
-    CONST StreamEcmFileEndpoint = '/api/public/ecm/document/activedocument/';
+    CONST DownloadFileEndpoint = '/api/public/ecm/document/activedocument/';
 
 
     public function __construct()
